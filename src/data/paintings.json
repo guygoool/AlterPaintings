@@ -1,0 +1,44 @@
+{
+  "paintings": [
+    {
+      "id": 1,
+      "title": "Memorial Composition",
+      "description": "A powerful symbolic composition featuring the Star of David, family portraits, and architectural elements representing memory, heritage, and the enduring spirit. The ocean and dramatic sky create a contemplative backdrop for this meaningful tribute.",
+      "medium": "Oil on Canvas",
+      "dimensions": "36\" x 28\"",
+      "year": "1985",
+      "image": "/images/memorial-composition.jpg",
+      "category": "portraits"
+    },
+    {
+      "id": 2,
+      "title": "Mediterranean Alley",
+      "description": "A charming street scene capturing the essence of old Mediterranean architecture with its characteristic turquoise and warm earth tones. The interplay of light and shadow creates depth and atmosphere.",
+      "medium": "Oil on Canvas",
+      "dimensions": "24\" x 18\"",
+      "year": "2018",
+      "image": "/images/mediterranean-street.jpg",
+      "category": "landscapes"
+    },
+    {
+      "id": 3,
+      "title": "The Matriarch",
+      "description": "A dignified portrait of an elderly woman, painted with deep respect and attention to the wisdom etched in her features. The traditional headwrap and clothing speak to cultural heritage.",
+      "medium": "Oil on Canvas",
+      "dimensions": "20\" x 16\"",
+      "year": "2019",
+      "image": "/images/elderly-woman-portrait.jpg",
+      "category": "portraits"
+    },
+    {
+      "id": 4,
+      "title": "The Scholar",
+      "description": "A contemplative study of an elderly Jewish man with his prayer book, capturing a moment of quiet devotion. The warm lighting and careful attention to facial details reflect years of wisdom and faith.",
+      "medium": "Oil on Canvas",
+      "dimensions": "22\" x 18\"",
+      "year": "2020",
+      "image": "/images/elderly-man-reading.jpg",
+      "category": "portraits"
+    }
+  ]
+} 
