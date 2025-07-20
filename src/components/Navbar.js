@@ -9,30 +9,31 @@ export default function Navbar() {
   const { t, isRTL } = useLanguage()
 
   return (
-    <nav className="bg-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`flex justify-between h-16 ${isRTL ? 'flex-row-reverse' : ''}`}>
+    <nav className="bg-white/80 backdrop-blur border-b border-art-gold/20 shadow-none">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
+        <div className={`flex justify-between items-center h-20 ${isRTL ? 'flex-row-reverse' : ''}`}>
           <div className={`flex items-center ${isRTL ? 'ml-4' : 'mr-4'}`}> 
-            <Link href="/" className="text-2xl font-bold text-deep-brown">
-              {t('artistName')}
+            <Link href="/" className="text-3xl font-serif-art font-bold text-deep-brown relative group">
+              <span className="relative z-10">{t('artistName')}</span>
+              <span className="art-underline absolute left-0 right-0 bottom-0 w-full h-2 group-hover:opacity-60 transition-opacity duration-300" />
             </Link>
           </div>
 
           {/* Desktop Menu */}
           <div
-            className={`hidden md:flex items-center ${isRTL ? 'flex-row-reverse gap-8' : 'gap-8'}`}
+            className={`hidden md:flex items-center ${isRTL ? 'flex-row-reverse gap-10' : 'gap-10'}`}
             style={isRTL ? { direction: 'rtl' } : {}}
           >
-            <Link href="/" className="text-deep-brown hover:text-art-gold transition-colors">
+            <Link href="/" className="text-lg font-serif-art text-deep-brown px-2 py-1 rounded hover:bg-art-gold/20 hover:text-art-gold transition-all duration-200">
               {t('home')}
             </Link>
-            <Link href="/gallery" className="text-deep-brown hover:text-art-gold transition-colors">
+            <Link href="/gallery" className="text-lg font-serif-art text-deep-brown px-2 py-1 rounded hover:bg-art-gold/20 hover:text-art-gold transition-all duration-200">
               {t('gallery')}
             </Link>
-            <Link href="/about" className="text-deep-brown hover:text-art-gold transition-colors">
+            <Link href="/about" className="text-lg font-serif-art text-deep-brown px-2 py-1 rounded hover:bg-art-gold/20 hover:text-art-gold transition-all duration-200">
               {t('about')}
             </Link>
-            <Link href="/contact" className="text-deep-brown hover:text-art-gold transition-colors">
+            <Link href="/contact" className="text-lg font-serif-art text-deep-brown px-2 py-1 rounded hover:bg-art-gold/20 hover:text-art-gold transition-all duration-200">
               {t('contact')}
             </Link>
             <LanguageSwitcher />
@@ -43,9 +44,10 @@ export default function Navbar() {
             <LanguageSwitcher />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-deep-brown hover:text-art-gold"
+              className="text-deep-brown hover:text-art-gold p-2 rounded-full border border-art-gold/30 bg-white/70 shadow-sm"
+              aria-label="Open menu"
             >
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
@@ -54,24 +56,28 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden">
-            <div
-              className={`px-2 pt-2 pb-3 space-y-1 sm:px-3 ${isRTL ? 'text-right' : ''}`}
-              style={isRTL ? { direction: 'rtl' } : {}}
+          <div className="md:hidden fixed inset-0 z-40 bg-warm-beige/95 backdrop-blur flex flex-col items-center justify-center space-y-8 transition-all duration-300">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-6 right-6 text-deep-brown hover:text-art-gold p-2 rounded-full border border-art-gold/30 bg-white/70 shadow-sm"
+              aria-label="Close menu"
             >
-              <Link href="/" className="block px-3 py-2 text-deep-brown hover:text-art-gold">
-                {t('home')}
-              </Link>
-              <Link href="/gallery" className="block px-3 py-2 text-deep-brown hover:text-art-gold">
-                {t('gallery')}
-              </Link>
-              <Link href="/about" className="block px-3 py-2 text-deep-brown hover:text-art-gold">
-                {t('about')}
-              </Link>
-              <Link href="/contact" className="block px-3 py-2 text-deep-brown hover:text-art-gold">
-                {t('contact')}
-              </Link>
-            </div>
+              <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <Link href="/" className="text-2xl font-serif-art text-deep-brown hover:text-art-gold transition-all duration-200" onClick={() => setIsOpen(false)}>
+              {t('home')}
+            </Link>
+            <Link href="/gallery" className="text-2xl font-serif-art text-deep-brown hover:text-art-gold transition-all duration-200" onClick={() => setIsOpen(false)}>
+              {t('gallery')}
+            </Link>
+            <Link href="/about" className="text-2xl font-serif-art text-deep-brown hover:text-art-gold transition-all duration-200" onClick={() => setIsOpen(false)}>
+              {t('about')}
+            </Link>
+            <Link href="/contact" className="text-2xl font-serif-art text-deep-brown hover:text-art-gold transition-all duration-200" onClick={() => setIsOpen(false)}>
+              {t('contact')}
+            </Link>
           </div>
         )}
       </div>
