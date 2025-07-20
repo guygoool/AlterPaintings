@@ -26,7 +26,7 @@ export default function PaintingDetail({ params }) {
       <div className="max-w-6xl mx-auto px-4">
         <div className="mb-8">
           <Link href="/gallery" className="text-deep-brown hover:text-art-gold transition-colors">
-            {isRTL ? 'גלריה ← חזרה ל' : '← Back to Gallery'}
+            {t('backToGallery')}
           </Link>
         </div>
 

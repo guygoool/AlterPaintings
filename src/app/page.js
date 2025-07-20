@@ -16,7 +16,7 @@ export default function Home() {
         <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-4">
           <div>
             <h1 className="text-4xl md:text-6xl font-bold mb-2">
-              {isRTL ? 'אלתר מצגר' : 'Alter Metzger'}
+              {t('artistName')}
             </h1>
             <p className="text-lg md:text-xl text-gray-200 mb-8">
               1927 - 1989

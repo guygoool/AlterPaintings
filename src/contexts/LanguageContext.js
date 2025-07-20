@@ -99,7 +99,8 @@ export const translations = {
     // Language
     language: 'Language',
     english: 'English',
-    hebrew: 'עברית'
+    hebrew: 'עברית',
+    artistName: 'Alter Metzger'
   },
   he: {
     // Navigation
@@ -196,7 +197,8 @@ export const translations = {
     // Language
     language: 'שפה',
     english: 'English',
-    hebrew: 'עברית'
+    hebrew: 'עברית',
+    artistName: 'אלתר מצגר'
   }
 }
 

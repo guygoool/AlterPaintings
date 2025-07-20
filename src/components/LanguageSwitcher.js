@@ -11,8 +11,8 @@ export default function LanguageSwitcher() {
         onChange={(e) => switchLanguage(e.target.value)}
         className="bg-white border border-gray-300 rounded-lg px-3 py-1 text-sm text-deep-brown focus:ring-2 focus:ring-deep-brown focus:border-transparent cursor-pointer"
       >
-        <option value="en">English</option>
-        <option value="he">עברית</option>
+        <option value="en">{t('english')}</option>
+        <option value="he">{t('hebrew')}</option>
       </select>
     </div>
   )
